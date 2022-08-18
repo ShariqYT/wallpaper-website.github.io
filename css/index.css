@@ -1,0 +1,242 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'centra no2';
+}
+
+
+/* Navigation Bar  */
+
+#navbar {
+    display: flex;
+    position: sticky;
+    background-color: rgb(255, 142, 142);
+    top: 0px;
+}
+
+#navbar::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+}
+
+/* Navigation Bar: Logo & Text(RIGHT SIDE) */
+#navbar-logo img {
+    margin-top: 5px;
+    height: 80px;
+    margin-left: 100px;
+}
+
+#navbar-logo a {
+    display: flex;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+/* Navigation Bar: Search Box (MIDDLE SIDE) */
+#navbar-search {
+    /* border: 2px solid black; */
+    padding: 5px 55px;
+}
+
+#navbar-search input {
+    margin: 10px 10px 10px 120px;
+    /* margin-top:50px; */
+    margin-right: 0px;
+    height: 60px;
+    width: 800px;
+    font-size: 20px;
+    border-radius: 10px 0px 0px 10px;
+    border: 0px;
+    background-color: rgb(241, 241, 241);
+    padding-left: 10px;
+    outline: none;
+}
+
+#navbar-search button {
+    padding-top: 14px;
+    height: 60px;
+    width: 70px;
+    font-size: 20px;
+    border-radius: 0px 10px 10px 0px;
+    border: 0px;
+    background-color: rgb(241, 241, 241);
+    cursor: pointer;
+}
+
+#navbar-search button:hover {
+    background-color: red;
+}
+
+#navbar-search button img {
+    margin-top: -35px;
+    margin-left: -20px;
+    padding-top: 14px;
+    position: fixed;
+    height: 30px;
+    width: 30px;
+}
+
+/* Navigation Bar: Items (LEFT SIDE)  */
+#navbar-item {
+    padding: 20px 55px;
+}
+
+#navbar-item ul {
+    display: flex;
+}
+
+#navbar-item ul li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    list-style: none;
+    padding-right: 50px;
+    padding-top: 10px;
+}
+
+#navbar-item ul li a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+}
+
+#navbar-item ul li a:hover {
+    color: rgb(255, 0, 0);
+}
+
+#navbar-item ul button {
+    color: white;
+    border: 2px solid red;
+    background-color: black;
+    grid-column: 1/span 3;
+    border-radius: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#navbar-item ul button:hover {
+    background-color: rgb(53, 53, 53);
+}
+
+
+/* Section */
+
+#container {
+    /* border: 5px solid red; */
+    margin: 50px 175px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+
+header {
+    grid-column: 1/span 3;
+}
+
+.box {
+    border: 2px solid red;
+    border-radius: 10px;
+    height: 300px;
+    width: 477px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+#container img {
+    height: 300px;
+    width: 477px;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.box:hover {
+    transform: scale(110%);
+    box-shadow: 5px 5px 20px grey;
+}
+
+header #section-h {
+    font-size: 50px;
+}
+
+/* footer */
+
+#f-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 800px 100px;
+    /* margin-bottom: -500px; */
+    background-color: black;
+}
+
+.text {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-top: 69px;
+}
+
+.box-6 p {
+    padding-bottom: 20px;
+}
+
+.box-7 p {
+    padding-bottom: 20px;
+}
+
+.box-8 button {
+    background-color: black;
+    box-shadow: 0px 0px 5px red;
+    font-size: 1rem;
+    height: 3rem;
+    display: flex;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 10px;
+    align-items: center;
+    color: rgb(180, 179, 179);
+    cursor: pointer;
+}
+
+.box-8 button:hover {
+    color: white;
+    box-shadow: 0px 0px 10px red;
+}
+
+.box-8 a {
+    text-decoration: none;
+}
+
+.box-9 {
+    color: rgb(180, 179, 179);
+}
+
+.box-10 {
+    grid-row: 3 / span 2;
+    grid-column: 2 / span 2;
+    color: rgb(180, 179, 179);
+}
+
+.box-11 {
+    color: rgb(180, 179, 179);
+}
