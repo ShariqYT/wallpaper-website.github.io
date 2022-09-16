@@ -1,0 +1,21 @@
+/* *{
+    background-color: aquamarine;
+} */
+
+#container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    top: 0px;
+    left: 0px;
+    align-items: center;
+    position: sticky;
+    background-color: rgb(255, 142, 142);
+    z-index: 2;
+}
+
+.nav-logo,
+.nav-search,
+.nav-text{
+    
+}

@@ -9,6 +9,7 @@ html {
 
 body {
     font-family: 'centra no2';
+    background-color: black;
 }
 
 
@@ -22,28 +23,19 @@ body {
     align-items: center;
     position: sticky;
     background-color: rgb(255, 142, 142);
+    z-index: 2;
 }
-/* #container:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: 0.7;
-    top: 0px;
-    left: 0px;
-} */
 
 /* Navigation Bar: Logo & Text(RIGHT SIDE) */
-.nav-logo img{
-    margin-top: 5px;
-    height: 80px;
+.nav-logo img {
+    height: 90px;
     margin-left: 100px;
 }
 
 .nav-logo {
     display: flex;
 }
+
 .nav-logo a {
     display: flex;
     align-items: center;
@@ -54,20 +46,18 @@ body {
 }
 
 /* Navigation Bar: Search Box (MIDDLE SIDE) */
-.nav-search  {
+.nav-search {
     /* border: 2px solid black; */
     background-color: rgb(255, 142, 142);
     top: 0px;
     left: 0px;
     align-items: center;
-    position: sticky;
     display: flex;
 }
 
 .nav-search input {
     /* margin: 10px 10px 10px 120px; */
     /* margin-top:50px; */
-    margin-right: 0px;
     height: 60px;
     width: 800px;
     font-size: 20px;
@@ -89,7 +79,7 @@ body {
     cursor: pointer;
 }
 
-.nav-search  button:hover {
+.nav-search button:hover {
     background-color: red;
 }
 
@@ -108,7 +98,6 @@ body {
     top: 0px;
     left: 0px;
     align-items: center;
-    position: sticky;
     display: flex;
     padding-left: 100px;
 }
@@ -155,7 +144,7 @@ body {
 
 /* Section */
 
-#s-container{
+#s-container {
     display: grid;
     margin: 150px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -163,30 +152,36 @@ body {
     grid-gap: 20px;
 }
 
-#s-container h1{
+#s-container h1 {
+    color: #fff;
     grid-column: 1 / span 3;
     font-size: 50px;
-}
-#s-container button{
-   border: 2px solid red;
 }
 
 .box {
     border: 2px solid red;
     border-radius: 10px;
-    
+    transition: 0.25s;
+}
+
+.box:hover {
+    scale: 105%;
+    box-shadow: 1px 1px 10px white;
 }
 
 .box img {
     height: 100%;
     width: 100%;
-    cursor: pointer;
     border-radius: 10px;
 }
 
 
 
 /* footer */
+
+hr {
+    border: 2px solid red;
+}
 
 #f-container {
     display: grid;
@@ -202,6 +197,7 @@ body {
     font-size: 1.5rem;
     padding: 50px 100px;
 }
+
 .box-6 p {
     padding-bottom: 20px;
 }
@@ -247,4 +243,83 @@ body {
 .box-11 {
     color: rgb(180, 179, 179);
     justify-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media (max-width: 375px){
+    
+    /* Navbar */
+
+    #container{
+        grid-template-columns: 1fr;
+        width: 1330px;
+    }
+    .nav-logo img {
+        margin-left:600px ;
+        height: 200px;
+        margin-top: 50px;
+    }
+    .nav-search input {
+        margin-top: 50px;
+        height: 100px;
+        margin-left: 250px;
+        font-size: 3rem;
+    }
+    
+    .nav-search button {
+        margin-top: 50px;
+        height: 100px;
+    }
+    
+    .nav-search button img {
+        height: 50px;
+        width: 50px;
+        padding-top: 0;
+    }
+    .nav-text {
+        margin-top: 50px;
+        margin-left: 70px;
+    }
+    
+    .nav-text ul li {
+        font-size: 4rem;
+        padding-right: 200px;
+    }
+    
+    .nav-text ul button {
+        height: 100px;
+        width: 200px;
+        font-size: 3rem;
+    }
+
+    /* Section */
+
+    #s-container {
+        grid-template-columns: 1fr ;
+        margin:70px;
+    }
+    
+    #s-container h1 {
+       grid-column: 1 span 1;
+    }
+    
+    .box {
+        
+    }
+    .box img {
+        height: 300px;
+        width: 100vw;
+    }
 }
